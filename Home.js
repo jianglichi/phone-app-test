@@ -20,7 +20,10 @@ class LogoTitle extends React.Component {
 
 
 class Home extends Component {
-  static navigationOptions = {headerTitle: <LogoTitle />};
+  static navigationOptions = {
+    //headerTitle: <LogoTitle />,
+    header: null,
+  };
 
   constructor(props) {
       super(props);

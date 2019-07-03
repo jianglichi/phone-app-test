@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { Navigator,Platform,Text, View,Image,StyleSheet,TextInput,Button,Alert,ScrollView,FlatList,SectionList,TouchableOpacity  } from 'react-native';
+import { Text, View,Image,StyleSheet,Button,Alert,TouchableOpacity  } from 'react-native';
 import { createAppContainer, createStackNavigator, StackActions, NavigationActions } from 'react-navigation'; // Version can be specified in package.json
-
 import { withNavigation } from 'react-navigation';
-
-
 
 class Footer extends Component {
   render() {
@@ -18,7 +15,9 @@ class Footer extends Component {
         <TouchableOpacity >
                 <Image
                   source={{uri:'https://s3-ap-northeast-1.amazonaws.com/ac.ezimport.co.jp/image/Lisa/img/2019-bibian-logo-jp.png?1'}}
-                  style={{width: 120, height: 40}} />
+                  style={{width: 120, height: 40}}
+                   onPress={() => this.props.navigation.navigate('Home')} 
+                  />
         </TouchableOpacity>
         <Button title="Go to Details" onPress={() => this.props.navigation.navigate('Details')}/>
       </View>
@@ -28,9 +27,6 @@ class Footer extends Component {
 
   }
 }
-
-
-
 
 
 export default withNavigation(Footer);
